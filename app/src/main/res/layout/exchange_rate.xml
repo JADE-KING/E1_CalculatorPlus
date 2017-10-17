@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBack" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@color/transparent"
+        android:gravity="center"
+        android:padding="15dp" >
+
+        <Spinner
+            android:id="@+id/rateSpin1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:entries="@array/exchangeRateItem"
+            />
+
+        <EditText
+            android:id="@+id/rateEdt1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/transparent"
+            android:hint="待转换货币"
+            android:textSize="22sp"
+            android:singleLine="true"
+            android:focusable="false"
+            android:cursorVisible="false"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@color/transparent"
+        android:gravity="center"
+        android:padding="15dp" >
+
+        <Spinner
+            android:id="@+id/rateSpin2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:entries="@array/exchangeRateItem"
+            />
+
+        <EditText
+            android:id="@+id/rateEdt2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/transparent"
+            android:hint="转换结果"
+            android:textSize="22sp"
+            android:singleLine="true"
+            android:focusable="false"
+            android:cursorVisible="false"
+            />
+
+    </LinearLayout>
+
+    <GridView
+        android:id="@+id/rateFunGrid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:numColumns="2"
+        android:gravity="center"
+        android:verticalSpacing="1dp"
+        android:horizontalSpacing="1dp"
+        android:paddingBottom="1dp"
+        android:paddingRight="1dp"
+        />
+
+    <GridView
+        android:id="@+id/rateNumGrid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:numColumns="3"
+        android:gravity="center"
+        android:verticalSpacing="1dp"
+        android:horizontalSpacing="1dp"
+        android:paddingBottom="1dp"
+        android:paddingRight="1dp"
+        />
+
+    <GridView
+        android:id="@+id/rateNumZeroGrid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:numColumns="2"
+        android:gravity="center"
+        android:verticalSpacing="1dp"
+        android:horizontalSpacing="1dp"
+        android:paddingRight="1dp"
+        />
+
+</LinearLayout>

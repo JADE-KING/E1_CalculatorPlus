@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBack"
+    android:gravity="center"
+    android:padding="10dp" >
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/round_corner_calculator"
+        android:scaleType="centerInside"
+        />
+
+    <EditText
+        android:id="@+id/introduction"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/transparent"
+        android:focusable="false"
+        android:cursorVisible="false"
+        android:gravity="center"
+        android:padding="10dp"
+        />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/transparent"
+        android:text="右划开始哦\n~(￣▽￣)~*"
+        android:textSize="40sp"
+        android:focusable="false"
+        android:cursorVisible="false"
+        android:gravity="center_horizontal"
+        android:padding="10dp"
+        />
+
+</LinearLayout>

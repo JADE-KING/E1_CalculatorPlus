@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="exchangeRateItem">
+        <item>澳元AUD</item>
+        <item>美元USD</item>
+        <item>欧元EUR</item>
+        <item>英镑GBP</item>
+        <item>新西兰元NZD</item>
+        <item>加元CAD</item>
+        <item>瑞郎CHF</item>
+        <item>人民币CNY</item>
+        <item>港元HKD</item>
+        <item>日元JPY</item>
+        <item>马币MYR</item>
+        <item>新加坡元SGD</item>
+        <item>台币TWD</item>
+    </string-array>
+</resources>
