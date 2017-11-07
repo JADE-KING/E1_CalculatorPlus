@@ -14,7 +14,7 @@ import java.util.List;
  * Created by yelia on 2017/10/16.
  */
 
-public class GetExchangeRate {
+public class GetExchangeRateOnline {
     private String urlStr = "http://api.avatardata.cn/Currency/CurrencyList?key=a1bd8c3a21ed40b8871876987bc697b1";
     private List<Double> rates = new ArrayList<Double>();
     private String datatime;
@@ -22,7 +22,7 @@ public class GetExchangeRate {
 
     private final static int CURRENCY_NUMBER = 13;
 
-    public GetExchangeRate() {
+    public GetExchangeRateOnline() {
         BufferedReader in = null;
         try {
             // 申请数据

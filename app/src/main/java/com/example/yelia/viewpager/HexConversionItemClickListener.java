@@ -4,20 +4,20 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.EditText;
 
-import static com.example.yelia.viewpager.Fragment_conversion.sourceConversion;
-import static com.example.yelia.viewpager.Fragment_conversion.targetConversion;
+import static com.example.yelia.viewpager.HexConversionFragment.sourceConversion;
+import static com.example.yelia.viewpager.HexConversionFragment.targetConversion;
 
 /**
  * Created by yelia on 2017/10/16.
  */
 
-public class OnConversionItemClickListener implements AdapterView.OnItemClickListener {
+public class HexConversionItemClickListener implements AdapterView.OnItemClickListener {
     private EditText numberEdit1;
     private EditText numberEdit2;
 
     private String result;
 
-    public OnConversionItemClickListener(EditText e1, EditText e2) {
+    public HexConversionItemClickListener(EditText e1, EditText e2) {
         numberEdit1 = e1;
         numberEdit2 = e2;
     }
@@ -57,7 +57,7 @@ public class OnConversionItemClickListener implements AdapterView.OnItemClickLis
             numberEdit2.setText("");
         }
         else if (text.equals("转  换")) {
-            if (!numberEdit1.getText().equals("")) {
+            if (!numberEdit1.getText().toString().equals("")) {
                 result = numberEdit1.getText().toString();
 
                 switch (sourceConversion) {

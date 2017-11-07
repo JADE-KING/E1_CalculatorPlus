@@ -13,13 +13,13 @@ import android.widget.TextView;
 import java.util.List;
 
 /**
- * Created by yelia on 2017/10/15.
+ * Created by yelia on 2017/11/6.
  */
 
-public class ConversionAdapter extends ArrayAdapter<String> {
+public class UnitConversionAdapter extends ArrayAdapter<String> {
     private final static int COLUMN_NUMBER = 4;
 
-    public ConversionAdapter(Context context, int textViewResourceId, List<String> objects) {
+    public UnitConversionAdapter(Context context, int textViewResourceId, List<String> objects) {
         super(context, textViewResourceId, objects);
     }
 
@@ -41,16 +41,7 @@ public class ConversionAdapter extends ArrayAdapter<String> {
             textView.setBackgroundResource(R.drawable.selector_button);
         }
 
-        if (new String("ABCDEF").indexOf(str.charAt(0)) >= 0) {
-            if (Build.VERSION.SDK_INT < Build.VERSION_CODES.LOLLIPOP) {
-                textView.setBackgroundResource(R.drawable.selector_button_symbol);
-            }
-            else {
-                textView.setBackgroundResource(R.drawable.ripple_button_symbol);
-            }
-            textView.setTextColor(getContext().getResources().getColor(R.color.colorButtonSymbolText));
-        }
-        else if (str.equals("清  空") || str.equals("转  换")) {
+        if (str.equals("清  空") || str.equals("转  换")) {
             if (Build.VERSION.SDK_INT < Build.VERSION_CODES.LOLLIPOP) {
                 textView.setBackgroundResource(R.drawable.selector_button_c);
             }

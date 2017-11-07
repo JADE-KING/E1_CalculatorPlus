@@ -10,7 +10,7 @@ import java.util.Stack;
  * Created by yelia on 2017/9/15.
  */
 
-public class OnButtonItemClickListener implements AdapterView.OnItemClickListener {
+public class SimpleCalculationItemClickListener implements AdapterView.OnItemClickListener {
     private EditText lastResult;
     private EditText outputScreen;
 
@@ -34,7 +34,7 @@ public class OnButtonItemClickListener implements AdapterView.OnItemClickListene
     // private static final int MAX_COUNT = 10; // 数字统计最大值为10
 
 
-    public OnButtonItemClickListener(EditText l, EditText o) {
+    public SimpleCalculationItemClickListener(EditText l, EditText o) {
         lastResult = l;
         outputScreen = o;
     }
@@ -293,7 +293,7 @@ public class OnButtonItemClickListener implements AdapterView.OnItemClickListene
 
         // 清空键
         else if (text.equals("C")) {
-           if (!lastResult.getText().equals(FIGHTING) || !outputScreen.getText().toString().equals("0")) {
+           if (!lastResult.getText().toString().equals(FIGHTING) || !outputScreen.getText().toString().equals("0")) {
                 numbers.clear();
                 symbols.clear();
 

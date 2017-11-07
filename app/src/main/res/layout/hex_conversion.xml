@@ -1,90 +1,85 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/colorBack"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorBack" >
+    android:orientation="vertical" >
 
     <LinearLayout
+        android:background="@color/transparent"
+        android:gravity="center"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:background="@color/transparent"
-        android:gravity="center"
         android:padding="15dp" >
 
         <Spinner
+            android:entries="@array/conversionItem"
             android:id="@+id/numSpin1"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:entries="@array/conversionItem"
-            />
+            android:layout_height="wrap_content" />
 
         <EditText
+            android:background="@color/transparent"
+            android:cursorVisible="false"
+            android:focusable="false"
+            android:hint="待转换数字"
             android:id="@+id/numEdt1"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:background="@color/transparent"
-            android:hint="待转换数字"
-            android:textSize="22sp"
             android:singleLine="true"
-            android:focusable="false"
-            android:cursorVisible="false"
-            />
+            android:textSize="22sp" />
 
     </LinearLayout>
 
     <LinearLayout
+        android:background="@color/transparent"
+        android:gravity="center"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:background="@color/transparent"
-        android:gravity="center"
         android:padding="15dp" >
 
         <Spinner
+            android:entries="@array/conversionItem"
             android:id="@+id/numSpin2"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:entries="@array/conversionItem"
-            />
+            android:layout_height="wrap_content" />
 
         <EditText
+            android:background="@color/transparent"
+            android:cursorVisible="false"
+            android:focusable="false"
+            android:hint="转换结果"
             android:id="@+id/numEdt2"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:background="@color/transparent"
-            android:hint="转换结果"
-            android:textSize="22sp"
             android:singleLine="true"
-            android:focusable="false"
-            android:cursorVisible="false"
-            />
+            android:textSize="22sp" />
 
     </LinearLayout>
 
     <GridView
+        android:gravity="center"
         android:id="@+id/conFunGrid"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:numColumns="2"
-        android:gravity="center"
-        android:verticalSpacing="1dp"
         android:horizontalSpacing="1dp"
+        android:verticalSpacing="1dp"
         android:paddingBottom="1dp"
-        android:paddingRight="1dp"
-        />
+        android:paddingRight="1dp" />
 
     <GridView
+        android:gravity="center"
         android:id="@+id/conNumGrid"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:numColumns="4"
-        android:gravity="center"
-        android:verticalSpacing="1dp"
         android:horizontalSpacing="1dp"
-        />
+        android:verticalSpacing="1dp" />
 
 </LinearLayout>

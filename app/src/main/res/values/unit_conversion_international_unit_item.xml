@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="internationalUnit">
+        <item>米(m)</item>
+        <item>平方米(m²)</item>
+        <item>立方米(m³)</item>
+        <item>千克(kg)</item>
+        <item>开式度(K)</item>
+        <item>秒(s)</item>
+        <item>字节(b)</item>
+    </string-array>
+</resources>

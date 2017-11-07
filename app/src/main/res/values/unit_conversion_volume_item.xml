@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="volume">
+        <item>立方米(m³)</item>
+        <item>立方分米(dm³)</item>
+        <item>立方厘米(cm³)</item>
+        <item>立方毫米(mm³)</item>
+        <item>升(l)</item>
+        <item>分升(dl)</item>
+        <item>毫升(ml)</item>
+        <item>厘升(cl)</item>
+        <item>公石(hl)</item>
+        <item>微升(ul)</item>
+    </string-array>
+</resources>

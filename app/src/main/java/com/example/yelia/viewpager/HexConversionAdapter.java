@@ -13,16 +13,14 @@ import android.widget.TextView;
 import java.util.List;
 
 /**
- * Created by yelia on 2017/9/11.
+ * Created by yelia on 2017/10/15.
  */
 
-public class CalculatorAdapter extends ArrayAdapter<String> {
+public class HexConversionAdapter extends ArrayAdapter<String> {
     private final static int COLUMN_NUMBER = 4;
-    private int resourceId;
 
-    public CalculatorAdapter(Context context, int textViewResourceId, List<String> objects) {
+    public HexConversionAdapter(Context context, int textViewResourceId, List<String> objects) {
         super(context, textViewResourceId, objects);
-        resourceId = textViewResourceId;
     }
 
     @NonNull
@@ -43,17 +41,7 @@ public class CalculatorAdapter extends ArrayAdapter<String> {
             textView.setBackgroundResource(R.drawable.selector_button);
         }
 
-        // 设置清零键和符号键的颜色
-        if (str.equals("C")) {
-            if (Build.VERSION.SDK_INT < Build.VERSION_CODES.LOLLIPOP) {
-                textView.setBackgroundResource(R.drawable.selector_button_c);
-            }
-            else {
-                textView.setBackgroundResource(R.drawable.ripple_button_c);
-            }
-            textView.setTextColor(getContext().getResources().getColor(R.color.colorButtonCText));
-        }
-        else if (str.equals("%") || str.equals("÷") || str.equals("×") || str.equals("-") || str.equals("+") || str.equals("=") || str.equals("DEL")) {
+        if (new String("ABCDEF").indexOf(str.charAt(0)) >= 0) {
             if (Build.VERSION.SDK_INT < Build.VERSION_CODES.LOLLIPOP) {
                 textView.setBackgroundResource(R.drawable.selector_button_symbol);
             }
@@ -61,6 +49,15 @@ public class CalculatorAdapter extends ArrayAdapter<String> {
                 textView.setBackgroundResource(R.drawable.ripple_button_symbol);
             }
             textView.setTextColor(getContext().getResources().getColor(R.color.colorButtonSymbolText));
+        }
+        else if (str.equals("清  空") || str.equals("转  换")) {
+            if (Build.VERSION.SDK_INT < Build.VERSION_CODES.LOLLIPOP) {
+                textView.setBackgroundResource(R.drawable.selector_button_c);
+            }
+            else {
+                textView.setBackgroundResource(R.drawable.ripple_button_c);
+            }
+            textView.setTextColor(getContext().getResources().getColor(R.color.colorButtonCText));
         }
 
         return view;

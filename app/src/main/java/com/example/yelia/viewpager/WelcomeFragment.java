@@ -12,7 +12,7 @@ import android.widget.EditText;
  * Created by yelia on 2017/10/17.
  */
 
-public class Fragment_Welcome extends Fragment {
+public class WelcomeFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -20,12 +20,13 @@ public class Fragment_Welcome extends Fragment {
         EditText introduction = (EditText)view.findViewById(R.id.introduction);
         introduction.setText(
                 "\nHello world" +
-                "\nI'm calculator" +
+                "\nI'm fafafa" +
                 "\n" +
-                "\n本计算器有以下三个功能:" +
+                "\n本计算器有以下四个功能:" +
                 "\n1. 简单连续计算" +
                 "\n2. 进制转换" +
-                "\n3. 汇率转换(需要网络进行初始化)" +
+                "\n3. 单位转换" +
+                "\n4. 汇率转换(需要网络进行初始化)" +
                 "\n" +
                 "\nTip: 左划右划可以切换界面" +
                 "\n");

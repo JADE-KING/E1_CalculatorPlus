@@ -11,6 +11,7 @@ import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.GridView;
 import android.widget.Spinner;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -21,9 +22,11 @@ import static com.example.yelia.viewpager.MainActivity.mainActivity;
  * Created by yelia on 2017/10/16.
  */
 
-public class Fragment_exchange_rate extends Fragment {
+public class ExchangeRateFragment extends Fragment {
     public static String sourceCurrency;
     public static String targetCurrency;
+
+    private TextView rateTimeText;
 
     private Spinner rateSpin1;
     private Spinner rateSpin2;
@@ -55,6 +58,9 @@ public class Fragment_exchange_rate extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.exchange_rate, container, false);
+
+        rateTimeText = (TextView)view.findViewById(R.id.rateTimeText);
+        rateTimeText.setText("汇率更新时间：" + MainActivity.rate.getDate() + " " + MainActivity.rate.getDatatime());
 
         exchangeRateItem = getResources().getStringArray(R.array.exchangeRateItem);
 
@@ -91,19 +97,19 @@ public class Fragment_exchange_rate extends Fragment {
         for (String s : rateFunTexts) { rateFunList.add(s); }
         rateFunAdapter = new ExchangeRateAdapter(mainActivity, R.id.textButton, rateFunList);
         rateFunGrid.setAdapter(rateFunAdapter);
-        rateFunGrid.setOnItemClickListener(new OnExchangeItemClickListener(rateEdt1, rateEdt2));
+        rateFunGrid.setOnItemClickListener(new ExchangeRateItemClickListener(rateEdt1, rateEdt2));
 
         rateNumGrid = (GridView)view.findViewById(R.id.rateNumGrid);
         for (String s : rateNumTexts) { rateNumList.add(s); }
         rateNumAdapter = new ExchangeRateAdapter(mainActivity, R.id.textButton, rateNumList);
         rateNumGrid.setAdapter(rateNumAdapter);
-        rateNumGrid.setOnItemClickListener(new OnExchangeItemClickListener(rateEdt1, rateEdt2));
+        rateNumGrid.setOnItemClickListener(new ExchangeRateItemClickListener(rateEdt1, rateEdt2));
 
         rateNumZeroGrid = (GridView)view.findViewById(R.id.rateNumZeroGrid);
         for (String s : rateNumZeroTexts) { rateNumZeroList.add(s); }
         rateNumZeroAdapter = new ExchangeRateAdapter(mainActivity, R.id.textButton, rateNumZeroList);
         rateNumZeroGrid.setAdapter(rateNumZeroAdapter);
-        rateNumZeroGrid.setOnItemClickListener(new OnExchangeItemClickListener(rateEdt1, rateEdt2));
+        rateNumZeroGrid.setOnItemClickListener(new ExchangeRateItemClickListener(rateEdt1, rateEdt2));
 
         return view;
     }

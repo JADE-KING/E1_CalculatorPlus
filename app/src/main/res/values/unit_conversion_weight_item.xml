@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="weight">
+        <item>千克(kg)</item>
+        <item>克(g)</item>
+        <item>毫克(mg)</item>
+        <item>微克(ug)</item>
+        <item>吨(t)</item>
+        <item>公担(q)</item>
+        <item>克拉(ct)</item>
+        <item>分(point)</item>
+    </string-array>
+</resources>

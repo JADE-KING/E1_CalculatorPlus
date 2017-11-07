@@ -21,7 +21,7 @@ import static com.example.yelia.viewpager.MainActivity.mainActivity;
  * Created by yelia on 2017/10/15.
  */
 
-public class Fragment_conversion extends Fragment {
+public class HexConversionFragment extends Fragment {
     public static int sourceConversion;
     public static int targetConversion;
 
@@ -50,7 +50,7 @@ public class Fragment_conversion extends Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.conversion, container, false);
+        View view = inflater.inflate(R.layout.hex_conversion, container, false);
 
         conversionItem = getResources().getStringArray(R.array.conversionItem);
 
@@ -85,15 +85,15 @@ public class Fragment_conversion extends Fragment {
 
         conFunGrid = (GridView)view.findViewById(R.id.conFunGrid);
         for (String s : conFunTexts) { conFunList.add(s); }
-        conFunAdapter = new ConversionAdapter(mainActivity, R.id.textButton, conFunList);
+        conFunAdapter = new HexConversionAdapter(mainActivity, R.id.textButton, conFunList);
         conFunGrid.setAdapter(conFunAdapter);
-        conFunGrid.setOnItemClickListener(new OnConversionItemClickListener(numEdt1, numEdt2));
+        conFunGrid.setOnItemClickListener(new HexConversionItemClickListener(numEdt1, numEdt2));
 
         conNumGrid = (GridView)view.findViewById(R.id.conNumGrid);
         for (String s : conNumTexts) { conNumList.add(s); }
-        conNumAdapter = new ConversionAdapter(mainActivity, R.id.textButton, conNumList);
+        conNumAdapter = new HexConversionAdapter(mainActivity, R.id.textButton, conNumList);
         conNumGrid.setAdapter(conNumAdapter);
-        conNumGrid.setOnItemClickListener(new OnConversionItemClickListener(numEdt1, numEdt2));
+        conNumGrid.setOnItemClickListener(new HexConversionItemClickListener(numEdt1, numEdt2));
 
         return view;
     }

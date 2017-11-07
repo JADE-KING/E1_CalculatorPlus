@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="area">
+        <item>平方千米(km²)</item>
+        <item>公顷(ha)</item>
+        <item>公亩(are)</item>
+        <item>平方米(m²)</item>
+        <item>平方分米(dm²)</item>
+        <item>平方厘米(cm²)</item>
+        <item>平方毫米(mm²)</item>
+    </string-array>
+</resources>

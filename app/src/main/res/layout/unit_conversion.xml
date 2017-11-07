@@ -2,19 +2,9 @@
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:background="@color/colorBack"
-    android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent" >
-
-    <TextView
-        android:background="@color/transparent"
-        android:gravity="center"
-        android:id="@+id/rateTimeText"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:padding="15dp"
-        android:textSize="18sp" />
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
 
     <LinearLayout
         android:background="@color/transparent"
@@ -25,8 +15,8 @@
         android:padding="15dp" >
 
         <Spinner
-            android:entries="@array/exchangeRateItem"
-            android:id="@+id/rateSpin1"
+            android:entries="@array/unitConversionItem"
+            android:id="@+id/unitSpin0"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
 
@@ -34,8 +24,8 @@
             android:background="@color/transparent"
             android:cursorVisible="false"
             android:focusable="false"
-            android:hint="待转换货币"
-            android:id="@+id/rateEdt1"
+            android:hint="国际单位："
+            android:id="@+id/unitEdit0"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -53,8 +43,36 @@
         android:padding="15dp" >
 
         <Spinner
-            android:entries="@array/exchangeRateItem"
-            android:id="@+id/rateSpin2"
+            android:entries="@array/length"
+            android:id="@+id/unitSpin1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:background="@color/transparent"
+            android:cursorVisible="false"
+            android:focusable="false"
+            android:hint="待转换单位"
+            android:id="@+id/unitEdit1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:singleLine="true"
+            android:textSize="22sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:background="@color/transparent"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:padding="15dp" >
+
+        <Spinner
+            android:entries="@array/length"
+            android:id="@+id/unitSpin2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
 
@@ -63,7 +81,7 @@
             android:cursorVisible="false"
             android:focusable="false"
             android:hint="转换结果"
-            android:id="@+id/rateEdt2"
+            android:id="@+id/unitEdit2"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -74,7 +92,7 @@
 
     <GridView
         android:gravity="center"
-        android:id="@+id/rateFunGrid"
+        android:id="@+id/unitFunGrid"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:numColumns="2"
@@ -85,7 +103,7 @@
 
     <GridView
         android:gravity="center"
-        android:id="@+id/rateNumGrid"
+        android:id="@+id/unitNumGrid"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:numColumns="3"
@@ -96,7 +114,7 @@
 
     <GridView
         android:gravity="center"
-        android:id="@+id/rateNumZeroGrid"
+        android:id="@+id/unitNumZeroGrid"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:numColumns="2"

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="time">
+        <item>年(yr)</item>
+        <item>周(weed)</item>
+        <item>天(d)</item>
+        <item>时(h)</item>
+        <item>分(min)</item>
+        <item>秒(s)</item>
+        <item>毫秒(ms)</item>
+        <item>微秒(μs)</item>
+        <item>纳秒(ns)</item>
+    </string-array>
+</resources>

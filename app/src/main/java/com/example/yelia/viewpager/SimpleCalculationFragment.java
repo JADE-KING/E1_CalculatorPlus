@@ -20,7 +20,7 @@ import static com.example.yelia.viewpager.MainActivity.mainActivity;
  * Created by yelia on 2017/10/15.
  */
 
-public class Fragment_simple extends Fragment {
+public class SimpleCalculationFragment extends Fragment {
     private EditText lastResult = null;
     private EditText outputScreen = null;
     private GridView gridButtons = null;
@@ -59,12 +59,12 @@ public class Fragment_simple extends Fragment {
         }
 
         // 创建适配器
-        adapter = new CalculatorAdapter(mainActivity, R.id.textButton, textBtnList);
+        adapter = new SimpleCalculationAdapter(mainActivity, R.id.textButton, textBtnList);
         // 设置适配器
         gridButtons = (GridView)view.findViewById(R.id.gridButtons);
         gridButtons.setAdapter(adapter);
         // 设置按键监听器
-        gridButtons.setOnItemClickListener(new OnButtonItemClickListener(lastResult, outputScreen));
+        gridButtons.setOnItemClickListener(new SimpleCalculationItemClickListener(lastResult, outputScreen));
 
         return view;
     }

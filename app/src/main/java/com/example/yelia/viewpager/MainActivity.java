@@ -11,7 +11,7 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
     public static MainActivity mainActivity;
-    public static GetExchangeRate rate;
+    public static GetExchangeRateOnline rate;
 
     private ViewPager viewPager;
 
@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
         Thread thread = new Thread(new Runnable() {
             @Override
             public void run() {
-                rate = new GetExchangeRate();
+                rate = new GetExchangeRateOnline();
             }
         });
         thread.start();
@@ -40,14 +40,15 @@ public class MainActivity extends AppCompatActivity {
         }
 
         List<Fragment> fragments = new ArrayList<Fragment>();
-        fragments.add(new Fragment_Welcome());
-        fragments.add(new Fragment_simple());
-        fragments.add(new Fragment_conversion());
-        fragments.add(new Fragment_exchange_rate());
+        fragments.add(new WelcomeFragment());
+        fragments.add(new SimpleCalculationFragment());
+        fragments.add(new HexConversionFragment());
+        fragments.add(new UnitConversionFragment());
+        fragments.add(new ExchangeRateFragment());
         FragAdapter adapter = new FragAdapter(getSupportFragmentManager(), fragments);
 
         ViewPager viewPager = (ViewPager)findViewById(R.id.viewPager);
         viewPager.setAdapter(adapter);
-        viewPager.setOffscreenPageLimit(4); // 切换不消除数据
+        viewPager.setOffscreenPageLimit(adapter.getCount()); // 切换不消除数据
     }
 }

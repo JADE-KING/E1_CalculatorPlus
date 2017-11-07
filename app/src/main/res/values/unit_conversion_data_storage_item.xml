@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="dataStorage">
+        <item>比特(bit)</item>
+        <item>字节(b)</item>
+        <item>千字节(kb)</item>
+        <item>兆字节(mb)</item>
+        <item>千兆字节(gb)</item>
+<!--
+        <item>太字节(tb)</item>
+        <item>拍字节(pb)</item>
+        <item>艾字节(eb)</item>
+-->
+    </string-array>
+</resources>
